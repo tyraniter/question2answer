@@ -1,5 +1,6 @@
 Options -Indexes
-DirectoryIndex index.php
+Options +FollowSymLinks
+DirectoryIndex index.html
 <IfModule mod_rewrite.c>
 RewriteEngine On
 #RewriteBase /
