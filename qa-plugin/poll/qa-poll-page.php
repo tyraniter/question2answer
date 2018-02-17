@@ -109,10 +109,39 @@
 				null, // suggest what to do next
 				null // extra parameters for page links
 			);
-			
+
+            $selected=qa_get('sort');
+            if (!in_array($selected ,array('all','launch','participate'))) $selected = null;
+            $qa_content['navigation']['sub'] = $this->qa_polls_sub_navigation($selected);
+
 			return $qa_content;
 		}
 
+        function qa_polls_sub_navigation($selected = 'all')
+        {
+
+            $navigation = array(
+                'all' => array(
+                    'label' => '所有投票',
+                    'url' => qa_path_html('polls',array('sort' => 'all')),
+                ),
+
+                'launch' => array(
+                    'label' => '发起的投票',
+                    'url' => qa_path_html('polls',array('sort' => 'launch')),
+                ),
+                'participate' => array(
+                    'label' => '参与的投票',
+                    'url' => qa_path_html('polls',array('sort' => 'participate')),
+                ),
+            );
+
+            if (isset($navigation[$selected]))
+                $navigation[$selected]['selected'] = true;
+            else $navigation['all']['selected'] = true;
+
+            return $navigation;
+        }
 
 	};
 	

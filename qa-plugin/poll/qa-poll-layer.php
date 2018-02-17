@@ -48,7 +48,7 @@
 			if (qa_opt('poll_enable')) {
 				global $qa_request;
 				if($qa_request == 'polls') {
-					$this->content['navigation']['sub'] = array('special'=>1);
+					//$this->content['navigation']['sub'] = array('special'=>1);
 				}
 				else if($this->template == 'ask' && !qa_user_permit_error('permit_post_q') && !qa_opt('site_maintenance') && qa_permit_check('permit_post_poll')) {
 					$this->content['form']['tags'] .= ' onSubmit="pollSubmit(event)"';
