@@ -572,6 +572,14 @@ function qa_content_prepare($voting = false, $categoryids = array())
 		);
 	}
 
+    // Only the 'level' permission error prevents the menu option being shown - others reported on /qa-include/pages/ask.php
+    if (qa_opt('nav_ask') && qa_user_maximum_permit_error('permit_post_q') != 'level') {
+        $qa_content['navigation']['main']['ask'] = array(
+            'url' => qa_path_html('ask', (qa_using_categories() && strlen($lastcategoryid)) ? array('cat' => $lastcategoryid) : null),
+            'label' => qa_lang_html('main/nav_ask'),
+        );
+    }
+
 	if (qa_opt('nav_questions')) {
 		$qa_content['navigation']['main']['questions'] = array(
 			'url' => qa_path_html('questions'),
@@ -616,16 +624,6 @@ function qa_content_prepare($voting = false, $categoryids = array())
 			'selected_on' => array('users$', 'users/', 'user/'),
 		);
 	}
-
-	// Only the 'level' permission error prevents the menu option being shown - others reported on /qa-include/pages/ask.php
-
-	if (qa_opt('nav_ask') && qa_user_maximum_permit_error('permit_post_q') != 'level') {
-		$qa_content['navigation']['main']['ask'] = array(
-			'url' => qa_path_html('ask', (qa_using_categories() && strlen($lastcategoryid)) ? array('cat' => $lastcategoryid) : null),
-			'label' => qa_lang_html('main/nav_ask'),
-		);
-	}
-
 
 	if (qa_get_logged_in_level() >= QA_USER_LEVEL_ADMIN || !qa_user_maximum_permit_error('permit_moderate') ||
 		!qa_user_maximum_permit_error('permit_hide_show') || !qa_user_maximum_permit_error('permit_delete_hidden')

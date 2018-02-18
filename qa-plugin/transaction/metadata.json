@@ -1,0 +1,11 @@
+{
+	"name": "Transaction Page",
+	"description": "A transaction plugin",
+	"version": "1.1",
+	"date": "2018-2-12",
+	"author": "Ganger",
+	"author_uri": "http://www.question2answer.org",
+	"license": "GPLv2",
+	"min_q2a": "1.5",
+	"load_order": "after_db_init"
+}

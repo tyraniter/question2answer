@@ -169,8 +169,7 @@ function pollVote(qid,uid,vid,cancel) {
 			window.alert(error);
 		}
 		else {
-		    window.alert('success');
-				//jQuery('#qa-poll-div').html(data);
+			//jQuery('#qa-poll-div').html(data);
 		}
 	  }  
 	});

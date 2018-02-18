@@ -175,6 +175,15 @@ $qa_content['form'] = array(
 			'note' => qa_opt('email_privacy'),
 			'error' => qa_html(@$errors['email']),
 		),
+
+        'role' => array(
+            'label' => '职业',
+            'type' => 'select-radio',
+            'tags'=> 'name="role"',
+            'value' => '医生',
+            'error' => qa_html(@$errors['email']),
+            'options' => array(1=>'医生',2=>'工程师',3=>'其他')
+        ),
 	),
 
 	'buttons' => array(

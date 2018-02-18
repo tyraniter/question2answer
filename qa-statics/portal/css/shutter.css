@@ -1,5 +1,5 @@
 * { margin: 0; padding: 0; }
-body { background-color: #333333; }
+body { background-color: #eeeeee; }
 img { border: 0; vertical-align: top; }
 ul, li { list-style: none; }
 
@@ -95,8 +95,8 @@ ul, li { list-style: none; }
     line-height:120px;
     text-align:center;
     cursor:pointer;
-    background:#1d7db1;
     border-radius: 10px;
+    background: url(../../images/clinicalneeds.png) no-repeat;
 }
 
 .item_content .engineer {
@@ -105,18 +105,20 @@ ul, li { list-style: none; }
     line-height:120px;
     text-align:center;
     cursor:pointer;
-    background:#EAD279;
+    #background:#EAD279;
     border-radius: 10px;
+    background: url(../../images/prototype.png) no-repeat;
 }
 
-.item_content .team {
+.item_content .news {
     width:100%;
     height:100%;
     line-height:120px;
     text-align:center;
     cursor:pointer;
-    background:#f0efee;
+    #background:#f0efee;
     border-radius: 10px;
+    background: url(../../images/raindropnews.png) no-repeat;
 }
 .item_content .title {
     font-size: 32px;
