@@ -8,10 +8,10 @@
 
 </head>
 <body>
-
+<div class="content">
 <div class="shutter">
   <div class="shutter-img">
-    <a href="#" data-shutter-title="newsfeed"><img src="qa-statics/images/newsfeed.png" alt="#"></a>
+    <a href="#" data-shutter-title="newsfeed"><img src="qa-statics/images/title.png" alt="#"></a>
     <a href="#" data-shutter-title="newsfeed"><img src="qa-statics/images/newsfeed.png" alt="#"></a>
     <!--<a href="#" data-shutter-title="Demo 3"><img src="qa-statics/images/shutter_3.jpg" alt="#"></a>
     <a href="#" data-shutter-title="Demo 4"><img src="qa-statics/images/shutter_4.jpg" alt="#"></a>-->
@@ -29,22 +29,22 @@
     <ul>
       <li>
         <div class="doctor">
-          <a href="./index.php"><span class="title"></span></a>
+          <a href="./index.php?qa=login&to=index.php" class="doctor_"></a>
         </div>
       </li>
       <li>
         <div class="engineer">
-          <a href="./index.php"><span class="title"></span></a>
+          <a href="./index.php?qa=login&to=index.php" class="engineer_"></a>
         </div>
       </li>
       <li>
         <div class="news">
-          <a href="./index.php"><span class="title"></span></a>
+          <a href="./index.php?qa=login&to=index.php" class="news_"></a>
         </div>
       </li>
     </ul>
 </div>
-
+</div>
 
 <script src="qa-statics/portal/js/jquery.min.js"></script>
 <script src="qa-statics/portal/js/velocity.js"></script>
@@ -52,12 +52,10 @@
 <script>
 $(function () {
   $('.shutter').shutter({
-	shutterW: 1000, // 容器宽度
-	shutterH: 358, // 容器高度
 	isAutoPlay: true, // 是否自动播放
 	playInterval: 3000, // 自动播放时间
-	curDisplay: 3, // 当前显示页
-	fullPage: false // 是否全屏展示
+	curDisplay: 1, // 当前显示页
+	fullPage: true // 是否全屏展示
   });
 });
 </script>

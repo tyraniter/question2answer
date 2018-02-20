@@ -1,17 +1,18 @@
 * { margin: 0; padding: 0; }
-body { background-color: #eeeeee;
-    background: url(../../images/demo.jpg) ;
-    background-size:contain;}
+body { background-color: #eeeeee;}
 img { border: 0; vertical-align: top; }
 ul, li { list-style: none; }
 
+.content {
+    position: relative;
+}
+
 .shutter {
   overflow: hidden;
-  width: 1000px;
-  height: 358px;
-  position: relative;
-  margin: 50px auto;
-  border-radius: 10px;
+  width: 100%;
+  height: 819px;
+  position: absolute;
+  z-index:1;
   
 }
 .shutter-img {
@@ -71,44 +72,40 @@ ul, li { list-style: none; }
   font-size: 14px;
 }
 
-.item_content ul  {
-    list-style:none;
-    height:100%;
-}
-.item_content ul li {
-    width:33.33%;
-    height:100%;
-    float:left;
-    background-color: #ffffff;
-    border-radius: 10px;
-}
 .item_content {
     overflow: hidden;
-    width: 1000px;
-    height: 358px;
-    position: relative;
-    margin: 50px auto;
-    border-radius: 10px;
-    background-color: #000000;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    top:450px;
 }
+
+.item_content ul  {
+    height:100%;
+    width:100%;
+}
+.item_content ul li {
+    width:170px;
+    height:100%;
+    margin:0 auto;
+    display: inline-block;
+}
+
 .item_content .doctor {
     width:100%;
     height:100%;
     line-height:120px;
-    text-align:center;
     cursor:pointer;
-    border-radius: 10px;
-    background: url(../../images/clinicalneeds.png) no-repeat;
+    background: url(../../images/clinical_needs.png) no-repeat;
 }
 
 .item_content .engineer {
     width:100%;
     height:100%;
     line-height:120px;
-    text-align:center;
     cursor:pointer;
-    #background:#EAD279;
-    border-radius: 10px;
     background: url(../../images/prototype.png) no-repeat;
 }
 
@@ -116,12 +113,15 @@ ul, li { list-style: none; }
     width:100%;
     height:100%;
     line-height:120px;
-    text-align:center;
     cursor:pointer;
-    #background:#f0efee;
-    border-radius: 10px;
-    background: url(../../images/raindropnews.png) no-repeat;
+    background: url(../../images/news_small.png) no-repeat;
 }
+
+.item_content ul li a{
+    width:100%;
+    height:100%;
+}
+
 .item_content .title {
     font-size: 32px;
 }
