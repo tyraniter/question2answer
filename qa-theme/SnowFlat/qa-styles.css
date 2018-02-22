@@ -617,7 +617,7 @@ blockquote p {
 }
 @media (min-width: 980px) {
 	.qa-nav-sub {
-		font-size: 13px;
+		font-size: 13px; /* 导航字体大小 */
 		padding: 0 6px;
 	}
 	.qa-nav-sub-item {

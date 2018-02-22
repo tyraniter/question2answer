@@ -140,6 +140,7 @@ else
 	$forgotpath = qa_path('forgot', array('e' => $inemailhandle));
 
 $forgothtml = '<a href="' . qa_html($forgotpath) . '">' . qa_lang_html('users/forgot_link') . '</a>';
+$registerhtml ='<a href="' . qa_html(qa_path('register')) . '">' . '注册'. '</a>';
 
 $qa_content['form'] = array(
 	'tags' => 'method="post" action="' . qa_self_html() . '"',
@@ -176,6 +177,7 @@ $qa_content['form'] = array(
 	'buttons' => array(
 		'login' => array(
 			'label' => qa_lang_html('users/login_button'),
+            'note' => $registerhtml
 		),
 	),
 
